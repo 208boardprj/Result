@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 결과</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .score {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .quiz-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 10px; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>퀴즈 결과</h1>
+    <p class="score"></p>
+
+    
+    <div class="quiz-buttons">
+        <button class="btn" onclick="restartQuiz1()">다시 풀기 or 도전하기 - 롤(쉬움)</button>
+        <button class="btn" onclick="restartQuiz2()">다시 풀기 or 도전하기 - 과학(쉬움)</button>
+        <button class="btn" onclick="restartQuiz3()">다시 풀기 or 도전하기 - 한국사(쉬움)</button>
+        <button class="btn" onclick="restartQuiz4()">다시 풀기 or 도전하기 - 롤(어려움)</button>
+        <button class="btn" onclick="restartQuiz5()">다시 풀기 or 도전하기 - 과학(어려움)</button>
+        <button class="btn" onclick="restartQuiz6()">다시 풀기 or 도전하기 - 세계사(어려움)</button>
+    </div>
+
+    <script>
+        const score = localStorage.getItem('score') || 0;
+        document.querySelector('.score').textContent = `최종 점수: ${score}`;
+
+        function restartQuiz1() {
+            localStorage.removeItem('score');
+            window.location.href = 'e-lol-quiz.html?question=1';
+        }
+
+        function restartQuiz2() {
+            localStorage.removeItem('score');
+            window.location.href = 'e-ns-quiz.html?question=1';
+        }
+
+        function restartQuiz3() {
+            localStorage.removeItem('score');
+            window.location.href = 'e-la-quiz.html?question=1';
+        }
+
+        function restartQuiz4() {
+            localStorage.removeItem('score');
+            window.location.href = 'h-lol-quiz.html?question=1';
+        }
+
+        function restartQuiz5() {
+            localStorage.removeItem('score');
+            window.location.href = 'h-ns-quiz.html?question=1';
+        }
+
+        function restartQuiz6() {
+            localStorage.removeItem('score');
+            window.location.href = 'h-la-quiz.html?question=1';
+        }
+    </script>
+
+</body>
+</html>

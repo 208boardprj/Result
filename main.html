@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그래밍 퀴즈</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+        
+        .quiz-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: 10px; 
+            margin-top: 20px;
+        }
+
+        .quiz-buttons button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .quiz-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>퀴즈 풀기</h1>
+        <p>퀴즈를 다 풀고 맛있는 간식을 받아가세요!!</p>
+    </header>
+
+    <main>
+        <section class="quiz-intro">
+            <h2>퀴즈 시작하기</h2>
+            <p>정답을 맞추고 점수를 얻어 보세요! 퀴즈의 단계가 올라갈수록 보상이 더 커집니다.</p>
+            
+            <div class="quiz-buttons">
+                <button onclick="location.href='e-lol-quiz.html'">롤(쉬움)</button>
+                <button onclick="location.href='e-ns-quiz.html'">과학(쉬움)</button>
+                <button onclick="location.href='e-la-quiz.html'">한국사(쉬움)</button>
+                <button onclick="location.href='h-lol-quiz.html'">롤(어려움)</button>
+                <button onclick="location.href='h-ns-quiz.html'">과학(어려움)</button>
+                <button onclick="location.href='h-la-quiz.html'">세계사(어려움)</button>
+            </div>
+        </section>
+        <div class="nizika">
+            <img src="https://data.onnada.com/character/202211/3718766049_efd01d81_ijika4.jpg" alt="이지치 니지카" style="width: 80%; max-width: 400px; margin-top: 10px;">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 김도윤, 김현우, 문정원, 이은율</p>
+    </footer>
+</body>
+</html>
