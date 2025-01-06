@@ -41,7 +41,7 @@
 </head>
 <body>
 
-    <h1>퀴즈 결과</h1>
+    <h1 class="gift"></h1>
     <p class="score"></p>
 
     
@@ -86,6 +86,14 @@
         function restartQuiz6() {
             localStorage.removeItem('score');
             window.location.href = 'h-la-quiz.html?question=1';
+        }
+        const gift = document.querySelector(".gift")
+        if(score>=30){
+            document.querySelector('.gift').textContent = "축하합니다 상품을 받아가세요";
+
+        }
+        else{
+            document.querySelector('.gift').textContent = "실패..";
         }
     </script>
 
